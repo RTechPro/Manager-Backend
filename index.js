@@ -10,7 +10,12 @@ var cors = require('cors')
 const authMiddleware = require('./middleware/auth');
 
 
-app.use(cors()) 
+const corsOptions = {
+  credentials: true,
+  origin: ['http://localhost:3000', 'https://manager-swart.vercel.app/','*'] 
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(authRouter);
 app.use("/share",cardPublicRouter);
