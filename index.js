@@ -12,7 +12,7 @@ const authMiddleware = require('./middleware/auth');
 
 const corsOptions = {
   credentials: true,
-  origin: ['http://localhost:3000', 'https://manager-swart.vercel.app/','*'] 
+  origin: ['http://localhost:3000', 'https://manager-swart.vercel.app','*'] 
 };
 
 app.use(cors(corsOptions));
